@@ -6,7 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clime check</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <h3>Olá, confira o clima!</h3>
+        <div class="form-input-container">
+          <input type="text" name="cityName" id="cityName" placeholder="Nome da cidade" />
+          <button id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div id="weather-data">
+        <h2>
+          <i class="fa-solid fa-location dot"></i>
+          <span id="city"> Porto Alegre </span>
+          <img
+            src="https://countryflagsapi.com/png/br"
+            alt="Bandeira do País"
+            id="country"
+          />
+        </h2>
+        <p id="temperature"><span>38</span>&deg;C</p>
+        <div id="description-container">
+          <p id="id-description">Nublado</p>
+          <img
+            src="http://openweathermap.org/img/wn/10d.png"
+            alt="Condição climática"
+            id="weather"
+          />
+        </div>
+        <div id="details-container">
+          <p id="umidity">
+            <i class="fa-solid fa-droplet"></i>
+            <span>48%</span>
+          </p>
+          <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span>5 km/h</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+  <script src="js/config.js"></script>
+  <script>
+    var key = config.API_KEY
+    console.log(key)
+  </script>
 </html>
